@@ -15,6 +15,6 @@ class SaintSeed extends Seeder
      */
     public function run()
     {
-        Saint::factory()->count(1)->create();
+        Saint::factory()->count(10)->create();
     }
 }
