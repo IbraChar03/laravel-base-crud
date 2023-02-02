@@ -15,4 +15,12 @@ class MainController extends Controller
         ];
         return view("pages.home", $data);
     }
+    public function saint($id)
+    {
+        $saint = Saint::find($id);
+        $data = [
+            "saint" => $saint
+        ];
+        return view("pages.saint", $data);
+    }
 }
