@@ -15,12 +15,18 @@ class MainController extends Controller
         ];
         return view("pages.home", $data);
     }
-    public function saint($id)
+    public function saintSearch($id)
     {
         $saint = Saint::find($id);
         $data = [
             "saint" => $saint
         ];
         return view("pages.saint", $data);
+    }
+    public function destroy($id)
+    {
+        $saint = Saint::find($id);
+        $saint->delete();
+        return redirect()->route("home");
     }
 }

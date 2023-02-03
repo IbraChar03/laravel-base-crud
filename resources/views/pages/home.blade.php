@@ -3,11 +3,15 @@
 <h1>LIST OF SAINTS</h1>
 <ul>
     @foreach ($saints as $saint)
-    <a href="/saint/{{$saint -> id}}">
-        <li>
+    <li>
+        <a href="{{route('saint.search' , ['id' => $saint -> id])}}">
             <strong>Name :</strong> {{$saint -> name}}
-        </li>
-    </a>
+        </a>
+        <span>-</span>
+        <a href="{{route('saint.destroy',['id' => $saint -> id])}}">Delete</a>
+    </li>
+
+
     <br>
 
     @endforeach
