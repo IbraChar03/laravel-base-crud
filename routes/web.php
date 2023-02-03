@@ -11,9 +11,13 @@ Route::get(
 )->name("home");
 Route::get(
     '/saint/search/{id}',
-    [MainController::class, "saintSearch"]
+    [MainController::class, "searchSaint"]
 )->name("saint.search");
 Route::get(
     '/saint/destroy/{id}',
     [MainController::class, "destroy"]
 )->name("saint.destroy");
+Route::get(
+    '/saint/create',
+    [MainController::class, "createSaint"]
+)->name("saint.create");

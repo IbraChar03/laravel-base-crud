@@ -15,7 +15,7 @@ class MainController extends Controller
         ];
         return view("pages.home", $data);
     }
-    public function saintSearch($id)
+    public function searchSaint($id)
     {
         $saint = Saint::find($id);
         $data = [
@@ -28,5 +28,9 @@ class MainController extends Controller
         $saint = Saint::find($id);
         $saint->delete();
         return redirect()->route("home");
+    }
+    public function createSaint()
+    {
+        return view("pages.create-saint");
     }
 }

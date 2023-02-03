@@ -1,6 +1,10 @@
 @extends('layouts.main-layout')
 @section('content')
 <h1>LIST OF SAINTS</h1>
+<h3>
+    <a href="{{route('saint.create')}}">
+        Create a New Saint </a>
+</h3>
 <ul>
     @foreach ($saints as $saint)
     <li>
