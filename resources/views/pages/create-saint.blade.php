@@ -1,7 +1,9 @@
 @extends('layouts.main-layout')
 @section('content')
 <h1>CREATE A NEW SAINT</h1>
-<form action="">
+<form action="{{route('saint.request')}}"
+    method="POST">
+    @csrf
 
     <label for="name">Name : </label>
     <input type="text"

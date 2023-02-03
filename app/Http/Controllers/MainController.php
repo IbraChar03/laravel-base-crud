@@ -33,4 +33,16 @@ class MainController extends Controller
     {
         return view("pages.create-saint");
     }
+    public function requestSaint(Request $request)
+    {
+        $data = $request->all();
+        $saint = new Saint();
+        $saint->name = $data["name"];
+        $saint->birth_place = $data["birth_place"];
+        $saint->blessing_date = $data["blessing_date"];
+        $saint->miracles_number = $data["miracles_number"];
+        $saint->save();
+        return redirect()->route("home");
+
+    }
 }

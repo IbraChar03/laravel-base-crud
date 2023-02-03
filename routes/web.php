@@ -21,3 +21,7 @@ Route::get(
     '/saint/create',
     [MainController::class, "createSaint"]
 )->name("saint.create");
+Route::post(
+    '/saint/request',
+    [MainController::class, "requestSaint"]
+)->name("saint.request");
